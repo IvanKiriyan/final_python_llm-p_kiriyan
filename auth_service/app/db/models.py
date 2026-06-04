@@ -17,5 +17,5 @@ class User(Base):
     )
 
     __table_args__ = (
-        Index("ix_users_email", "email", unique=True)
+        Index("ix_users_email", "email", unique=True),
     )
