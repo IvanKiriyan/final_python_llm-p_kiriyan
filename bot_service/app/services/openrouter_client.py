@@ -1,8 +1,9 @@
 import httpx
-
 from app.core.config import settings
 
-async def connection_openrouter(prompt:str) -> str: # подклбчение к клиенту
+# Подключение к клиенту
+
+async def connection_openrouter(prompt:str) -> str:
     headers = {
         "Authorization": f"Bearer {settings.OPENROUTER_API_KEY}",
         "HTTP-Referer": settings.OPENROUTER_SITE_URL,
